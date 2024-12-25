@@ -1,0 +1,819 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+ 
+    font-family: Arial, sans-serif;
+    margin-top: 120px; /* Ajuste o valor com base na altura do cabeçalho */
+    line-height: 1.6;
+}
+
+
+/* Cabeçalho */
+header {
+
+    position: fixed; /* Fixa o menu na posição superior */
+    top: 0; /* Define a posição no topo */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Ocupa toda a largura da página */
+    z-index: 1000; /* Fica acima de outros elementos */
+    background-color: #001C7F; /* Cor de fundo (ajuste conforme necessário) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    padding: 10px 10px; /* Espaçamento interno */
+}
+/* Estilos para o menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: right;
+    background-color: #001C7F; /* Cor de fundo do menu */
+}
+
+nav ul li {
+    margin: 0 5px; /* Espaçamento entre os itens do menu */
+}
+
+nav ul li a {
+    color: #fff; /* Cor do texto do menu */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-size: 16px; /* Tamanho da fonte */
+    padding: 15px 20px; /* Espaçamento interno do link */
+    display: block; /* Para garantir que o link ocupe todo o espaço disponível */
+    transition: color 0.3s; /* Suaviza a transição da cor do texto */
+}
+
+nav ul li a:hover {
+    color: #28E414; /* Cor do texto ao passar o mouse */
+}
+
+
+/* Estilo para o Rodapé */
+footer {
+    background-color: #001C7F; /* Cor de fundo do rodapé */
+    color: white; /* Cor do texto */
+    padding: 30px;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+footer .social-icons {
+    position: absolute;
+    top: -10px;  /* Ajuste o valor conforme necessário */
+    right: 30px; /* Ajuste o valor conforme necessário */
+    margin-bottom: 10px;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #00796b; /* Cor dos ícones quando passados com o mouse */
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center; /* Ajusta verticalmente */
+    justify-content: flex-start; /* Ajusta horizontalmente */
+}
+
+.logo {
+    top: 30px; /* Ajuste para cima/baixo */
+    left: 20px; /* Ajuste para esquerda/direita */
+    height: 50px; /* Mantém as proporções */
+}
+
+/* Estilo básico para o cabeçalho */
+.header {
+    position: relative;
+    padding: 10px 20px;
+    background-color: #001C7F;
+}
+
+/* Estilo dos ícones de mídias sociais */
+.social-icons {
+    position: absolute;
+    top: -10px;  /* Ajuste o valor conforme necessário */
+    right: 30px; /* Ajuste o valor conforme necessário */
+}
+
+.social-icons a {
+    margin-left: 15px;  /* Espaçamento entre os ícones */
+    font-size: 24px;  /* Ajuste o tamanho dos ícones conforme necessário */
+    color: #fff;  /* Cor dos ícones */
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #0073e6;  /* Cor ao passar o mouse sobre os ícones */
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 20px;
+  background-color: #fff; /* Alterar para branco */
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+
+/* Banner Principal - Imagem e Vídeo de Fundo */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Altura do banner igual à altura da tela */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    object-fit: contain; /* Ajusta a imagem para cobrir o fundo */
+}
+
+.banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta o vídeo para cobrir o fundo */
+    z-index: -1; /* Mantém o vídeo atrás do conteúdo */
+}
+
+.banner .container {
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo fique acima do vídeo */
+}
+
+
+/* Estilos para a seção de vídeos */
+#nossos-impactos {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+#nossos-impactos h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.video-item {
+    flex: 1;
+    max-width: 560px;
+    margin: 1rem;
+    text-align: center;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 315px;
+}
+
+/* Texto no Banner */
+.banner h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.banner p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Estilo para os botões CTA */
+.cta-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 0px; /* Reduzido o espaçamento entre os botões */
+    flex-wrap: wrap; /* Permite que os botões se empilhem se necessário */
+    margin-top: 30px;
+    /* Estilo para os botões individuais */
+}
+.cta-button {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Reduzido o espaçamento entre os botões */
+    background-color: #004d40; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    padding: 12px 20px; /* Reduzido o padding para aproximar os botões */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+.cta-button:hover {
+    background-color: #00796b; /* Cor de fundo ao passar o mouse */
+}
+
+
+/* Seções de Conteúdo */
+.content-section {
+    padding: 2rem 0;
+}
+
+.content-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.service {
+    background: #f4f4f4;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.content-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.contact-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-form,
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+    margin-bottom: 15px;
+}
+
+.map iframe {
+    border-radius: 5px;
+}
+
+#sobre {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+#sobre h1, #sobre h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+#sobre p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#sobre ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#sobre ul.valores {
+    list-style-type: none;
+}
+
+#sobre ul.valores li {
+    margin-bottom: 10px;
+}
+
+#sobre ul.valores li strong {
+    color: #27ae60;
+}
+
+.team-photo img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#servicos {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+#servicos h1, #servicos h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#servicos p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-item img {
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+.service-item h2 {
+    color: #27ae60;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    color: #555;
+}
+
+.benefits {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.benefits li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Seção de Login */
+.login-section {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.login-section h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.login-section p {
+    text-align: center;
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login-form label {
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+.login-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.login-form button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #2ecc71;
+}
+
+.forgot-password {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #27ae60;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+
+/* Seção de Cadastro */
+.register-section {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.register-section h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.register-section p {
+    text-align: center;
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.register-form label {
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+.register-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.register-form button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-form button:hover {
+    background-color: #2ecc71;
+}
+
+.already-have-account {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.already-have-account a {
+    color: #27ae60;
+    text-decoration: none;
+}
+
+.already-have-account a:hover {
+    text-decoration: underline;
+}
+/* Estilos para o botão de voltar */
+.back-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #c0392b;
+}
+
+
+.whatsapp-float {
+    position: fixed; /* Fixar na tela */
+    bottom: 20px; /* Distância do rodapé */
+    right: 20px; /* Distância da lateral direita */
+    z-index: 1000; /* Ficar acima de outros elementos */
+    width: 60px; /* Tamanho do ícone */
+    height: 60px; /* Altura do ícone */
+    border-radius: 50%; /* Tornar o botão redondo */
+    background-color: white; /* Cor de fundo padrão do WhatsApp */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efeito de sombra */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float img {
+    width: 65px; /* Ajuste o tamanho do ícone */
+    height: 65px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1); /* Pequeno zoom ao passar o mouse */
+}
+/*Depoimentos */
+#depoimentos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0; /* Ajuste de espaçamento */
+    background-color: #f9f9f9; /* Exemplo de cor de fundo */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.testimonial {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 800px; /* Aumenta a largura */
+    height: auto; /* Ajusta a altura automaticamente com base no conteúdo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px auto; /* Centraliza cada depoimento horizontalmente */
+}
+
+.testimonial-logo {
+    width: 150px; /* Define uma largura fixa para todos os logos */
+    height: 80px; /* Define uma altura fixa para todos os logos */
+    object-fit: contain; /* Garante que a imagem se ajuste dentro das dimensões sem distorcer */
+    display: block; /* Faz com que o logo seja tratado como um bloco */
+    margin: 0 auto 20px; /* Centraliza o logo e adiciona espaçamento inferior */
+}
+
+.testimonial-text {
+    font-size: 1.0rem; /* Ajuste o tamanho do texto */
+    color: #333;
+    line-height: 1.; /* Aumenta o espaçamento entre linhas */
+    text-align: justify; /* Justifica o texto */
+    width: 100%; /* Alinha o texto para ocupar toda a largura disponível */
+    padding: 20px; /* Adiciona espaçamento interno à caixa de texto */
+    box-sizing: border-box; /* Inclui o padding no cálculo de largura */
+    max-width: 600px; /* Limita a largura máxima da caixa de texto */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+.author {
+    font-weight: bold; /* Negrito para o autor */
+    font-size: 1rem; /* Tamanho de texto padrão */
+    margin-top: 10px; /* Espaçamento superior */
+}
+
+.company {
+    font-style: italic; /* Itálico para o nome da empresa */
+    font-weight: normal; /* Remove o negrito */
+    font-size: 1rem; /* Tamanho de texto padrão */
+    margin-top: 5px; /* Espaçamento superior menor */
+}
+
+/* Media Queries */
+
+/* Para telas com largura máxima de 768px (tablets e dispositivos móveis) */
+@media (max-width: 768px) {
+    header {
+        position: fixed; /* Fixa o menu na posição superior */
+        top: 0; /* Define a posição no topo */
+        left: 0; /* Alinha à esquerda */
+        width: 100%; /* Ocupa toda a largura da página */
+        z-index: 1000; /* Fica acima de outros elementos */
+        background-color: #001C7F; /* Cor de fundo (ajuste conforme necessário) */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+        padding: 10px 20px; /* Espaçamento interno */
+         height: 120px; /* Certifique-se de que o tamanho não seja muito pequeno */
+    }
+    
+    /* Estilo para o menu hamburger */
+    .hamburger-menu {
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 30px;
+        z-index: 2;
+    }
+
+    .hamburger-menu .bar {
+        width: 30px;
+        height: 4px;
+        background-color: #fff;
+        border-radius: 20px;
+        transition: all 0.3s ease; /* Transições suaves */
+    }
+
+    /* Estilo para o menu ativo */
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0; /* Esconde o traço do meio */
+    }
+
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Posiciona o menu no lado direito */
+    nav {
+        position: absolute;
+        top:90px; /* Mantém o menu mais abaixo */
+        right: 0; /* Alinha o menu à direita */
+       
+        color: #fff;
+        padding: 20px;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start; /* Alinha itens ao início dentro do menu */
+        gap: 20px; /* Espaçamento entre os itens */
+        z-index: 1;
+        width: 100%; /* Largura do menu */
+        transition: all 0.3s ease;
+    }
+
+    /* Menu visível quando ativo */
+    nav.active {
+        display: flex;
+    }
+
+    /* Estilo do menu */
+    nav ul {
+        list-style: none; /* Remove marcadores para ocultar o menu padrão */
+        padding: 0; /* Remove o padding padrão */
+        margin: 0; /* Remove margens padrão */
+        display: flex;
+        flex-direction: column; /* Alinha itens na vertical */
+        gap: 10px; /* Espaçamento entre os itens */
+    }
+
+    /* Estilo dos itens do menu */
+    nav ul li {
+        width: 100%; /* Garante que cada item ocupe toda a largura do menu */
+        text-align: left; /* Alinha o texto à esquerda */
+    }
+
+    /* Estilo para os links */
+
+    /* Links do menu */
+    nav ul li a {
+        color: #fff; /* Cor do texto */
+        text-decoration: none; /* Remove o sublinhado */
+        padding: 10px 15px; /* Adiciona espaçamento interno */
+        border-radius: 5px; /* Bordas arredondadas */
+        transition: background-color 0.3s ease; /* Efeito de hover suave */
+    }
+
+    /* Hover nos links */
+    nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Fundo ao passar o mouse */
+    }
+    
+    /* Hover nos menu */
+    nav ul li a:hover {
+        color: #27ae60; /* Cor ao passar o mouse */
+    }
+
+    /* Tamanho das Fontes do Banner */
+    
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+        font-size: 1.2rem;
+    }
+    .service {
+        margin-bottom: 1rem;
+    }
+
+    /* Estilo dos ícones de mídias sociais */
+    .social-icons {
+        position: absolute;
+        top: -30px;  /* Ajuste o valor conforme necessário */
+        right: -10px; /* Ajuste o valor conforme necessário */
+    }
+
+    .social-icons a {
+        margin-left: 15px;  /* Espaçamento entre os ícones */
+        font-size: 24px;  /* Ajuste o tamanho dos ícones conforme necessário */
+        color: #fff;  /* Cor dos ícones */
+        text-decoration: none;
+    }
+
+    .social-icons a:hover {
+    color: #0073e6;  /* Cor ao passar o mouse sobre os ícones */
+    }
+
+    .testimonial {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial img {
+        margin-bottom: 10px;
+    }
+
+    .cta-buttons {
+            flex-direction: column; /* Empilha os botões um abaixo do outro */
+            align-items: center; /* Centraliza os botões */
+       }
+
+    .cta-button {
+        width: 50%; /* Faz com que os botões ocupem toda a largura disponível */
+        margin-bottom: 10px; /* Espaço entre os botões */
+    }
+
+    .cta-button:last-child {
+        margin-bottom: 0; /* Remove a margem do último botão */
+    }
+}
