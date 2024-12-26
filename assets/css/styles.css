@@ -5,11 +5,85 @@
     box-sizing: border-box;
 }
 
+
+
+/* styles.css */
 body {
- 
     font-family: Arial, sans-serif;
     margin-top: 120px; /* Ajuste o valor com base na altura do cabeçalho */
-    line-height: 1.6;
+    
+}
+
+
+
+
+.axel-logo {
+    width: 250px; /* Ajuste este valor conforme necessário */
+    height: auto;
+    margin-left: 10px; /* Espaço entre o logo e a borda esquerda */
+}
+
+
+.logo {
+    top: 30px; /* Ajuste para cima/baixo */
+    left: 20px; /* Ajuste para esquerda/direita */
+    height: 50px; /* Mantém as proporções */
+}
+
+/* Estilo básico para o cabeçalho */
+.header {
+    position: relative;
+     
+    background-color: #001C7F;
+}
+
+.counter-container {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    background-color: #001C7F;
+    
+    
+}                         
+.counter-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.counter-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.weight-counter {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 200px;  /* Reduz a largura da barra de progresso */
+    height: 20px;  /* Reduz a altura da barra de progresso */
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0;
+    background-color: #0cbe1b;
+    transition: width 0.3s ease;
+}
+.container {
+    width: 100%;                           
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center; /* Ajusta verticalmente */
+    justify-content: flex-start; /* Ajusta horizontalmente */
 }
 
 
@@ -64,49 +138,16 @@ footer {
     bottom: 0;
     width: 100%;
 }
-footer .social-icons {
-    position: absolute;
-    top: -10px;  /* Ajuste o valor conforme necessário */
-    right: 30px; /* Ajuste o valor conforme necessário */
-    margin-bottom: 10px;
-}
-
-footer .social-icons a {
-    color: white;
-    margin: 0 10px;
-    font-size: 20px;
-    transition: color 0.3s ease;
-}
-
-footer .social-icons a:hover {
-    color: #00796b; /* Cor dos ícones quando passados com o mouse */
-}
 
 footer p {
     margin-top: 10px;
 }
 
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: center; /* Ajusta verticalmente */
-    justify-content: flex-start; /* Ajusta horizontalmente */
+html {
+    scroll-behavior: smooth;
 }
 
-.logo {
-    top: 30px; /* Ajuste para cima/baixo */
-    left: 20px; /* Ajuste para esquerda/direita */
-    height: 50px; /* Mantém as proporções */
-}
 
-/* Estilo básico para o cabeçalho */
-.header {
-    position: relative;
-    padding: 10px 20px;
-    background-color: #001C7F;
-}
 
 /* Estilo dos ícones de mídias sociais */
 .social-icons {
@@ -304,8 +345,14 @@ footer p {
 
 .map iframe {
     border-radius: 5px;
+    width:100%; 
+    height:350px; 
+    border:0;
+    
 }
 
+
+                    
 #sobre {
     padding: 40px 20px;
     background-color: #f9f9f9;
@@ -656,6 +703,62 @@ h2 {
     margin-top: 5px; /* Espaçamento superior menor */
 }
 
+.chatbot {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 300px;
+    background: #f4f4f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999; /* Garantir que esteja à frente de outros elementos */
+}
+
+.chatbot button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0 0 8px 8px;
+    font-size: 16px;
+}
+
+
+#chatbot-content {
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+#chatbot-content p {
+    margin: 5px 0;
+}
+
+#chatbot-form {
+    display: flex;
+    gap: 5px;
+}
+
+#chatbot-form input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#chatbot-form button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
 /* Media Queries */
 
 /* Para telas com largura máxima de 768px (tablets e dispositivos móveis) */
@@ -669,16 +772,35 @@ h2 {
         background-color: #001C7F; /* Cor de fundo (ajuste conforme necessário) */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
         padding: 10px 20px; /* Espaçamento interno */
-         height: 120px; /* Certifique-se de que o tamanho não seja muito pequeno */
+         
     }
+    body {
+    font-family: Arial, sans-serif;
+    margin-top: 120px; /* Ajuste o valor com base na altura do cabeçalho */
     
+    }
+    .counter-container {
+    display: flex;
+    align-items: center;
+    padding:-10px;
+    background-color: #001C7F;
+    
+        
+    }
+
+    .axel-logo {
+      width: 250px; /* Ajuste este valor conforme necessário */
+       height: auto;
+      margin-left: 10px; /* Espaço entre o logo e a borda esquerda */
+    }
+ 
     /* Estilo para o menu hamburger */
     .hamburger-menu {
         display: flex;
         cursor: pointer;
         flex-direction: column;
         justify-content: space-around;
-        width: 30px;
+        width: 60px;
         height: 30px;
         z-index: 2;
     }
@@ -815,5 +937,21 @@ h2 {
 
     .cta-button:last-child {
         margin-bottom: 0; /* Remove a margem do último botão */
+    }
+     .service-item img {
+        width: 100%; /* Garante que as imagens se ajustem à largura do contêiner */
+        height: auto; /* Permite que a altura seja proporcional à largura */
+        object-fit: contain; /* Ajusta as imagens para caberem no espaço sem cortar */
+    }
+
+    .services-grid {
+        display: flex;
+        flex-direction: column; /* Empilha os itens verticalmente */
+        gap: 20px; /* Espaçamento entre os itens */
+    }
+
+    .service-item {
+        text-align: center; /* Centraliza o conteúdo dentro do item */
+        margin: 0 auto; /* Alinha o item ao centro */
     }
 }
