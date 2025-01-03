@@ -7,25 +7,24 @@
         <meta name="description" content="Axel Consultoria é especialista em créditos de reciclagem no Brasil, promovendo sustentabilidade e compliance ambiental.">
         <meta name="keywords" content="créditos de reciclagem, sustentabilidade, logística reversa, consultoria ambiental">
         <!-- Outros links -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/styles.css">
-        <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
         
-        <script src="assets/js/app.js" defer></script>
+        <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="assets/css/styles.css">
         
     </head>
     <body>
         <header>
         <!-- Cabeçalho -->
-        <div class="container">
+            <div class="container">
                 <img src="assets/images/logo.png" alt="Logo da Axel Consultoria" class="logo">
                 <!-- Menu Hamburger -->
                 <div class="hamburger-menu" id="hamburger-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
                 <div class="header">
                 <div class="social-icons">
                     <a href="https://www.linkedin.com" target="_blank" class="fab fa-linkedin" aria-label="LinkedIn" rel="noopener noreferrer"></a>
@@ -33,7 +32,7 @@
                     <a href="https://www.facebook.com/people/Axel-Consultoria/61570702023946/" target="_blank" class="fab fa-facebook" aria-label="Facebook" rel="noopener noreferrer"></a>
                     <a href="https://wa.me/5521964119992" target="_blank" class="fab fa-whatsapp" aria-label="WhatsApp" rel="noopener noreferrer"></a>
                 </div>
-            </div>   
+                </div>   
                 <nav>
                     <ul>
                         <li><a href="index.html">Início</a></li>
@@ -50,7 +49,7 @@
         <section class="banner">
             <video autoplay loop muted poster="assets/images/banner.jpg">
                 <source src="assets/videos/reciclagem-processo.mp4" type="video/mp4">
-                Seu navegador não suporta vídeos.
+            
             </video>
             <!-- Mensagem no Banner Principal -->
             <div class="container">
@@ -60,8 +59,8 @@
                 <!-- Botão CTA -->
                 <div class="cta-buttons">
                     <a href="contato.html" class="cta-button">Solicite uma Cotação</a>
-                    <a href="recicladores.html" class="cta-button">Sou Reciclador</a>
-                    <a href="industria.html" class="cta-button">Sou Indústria</a>
+                    <a href="recicladores.html" class="cta-button">   Sou Reciclador   </a>
+                    <a href="industria.html" class="cta-button">   Sou Indústria    </a>
                 </div>
             </div>
         </section>
@@ -97,38 +96,68 @@
 
         <!-- Nossos Impactos -->
         <section id="nossos-impactos" class="content-section">
-            <div class="container">
-                <h2>Nossos Impactos</h2>
-                <div class="video-container">
-                    <div class="video-item">
-                    <iframe width="560" height="315" 
-                            src="https://www.youtube.com/embed/SEU_VIDEO_ID1" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen 
-                            title="Vídeo explicativo sobre como transformamos a reciclagem em oportunidade de crescimento.">
-                        </iframe>
-                        
-                        <p>Veja como transformamos a reciclagem em oportunidade de crescimento.</p>
+             <div class="calculadora">
+                <h2>Nosso Impacto Ambiental</h2>
+                
+                    <h1>Calculadora Ambiental</h1>
+                <div class="total-compensado">
+                    Total de créditos de reciclagem compensados em 2024:
+                <span class="valor">3.000 toneladas</span>
                 </div>
-                <div class="video-item">
-                    <iframe 
-                        width="560" 
-                        height="315" 
-                        src="https://www.youtube.com/embed/SEU_VIDEO_ID2" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen 
-                        title="Vídeo sobre nossos parceiros e o impacto social das ações de reciclagem.">
-                    </iframe>
-                    <p>Conheça nossos parceiros e o impacto social das ações de reciclagem.</p>
+                <div class="barra-progresso">
+                    <div id="barra"></div>
                 </div>
-
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="assets/images/icon-carbon.png" alt="Ícone de Carbono">
+                        <p>Volume total de carbono NÃO emitido</p>
+                         <div class="value" id="carbono">720,00 tCO2e</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="assets/images/icon-energy.png" alt="Ícone de Energia">
+                        <p>Volume total de energia elétrica economizada</p>
+                        <div class="value" id="energia">838.530,00 Mwh</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="assets/images/icon-tree.png" alt="Ícone de Árvores">
+                        <p>Volume total de árvores preservadas</p>
+                        <div class="value" id="arvores">0,00 unid.</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="assets/images/icon-mineral.png" alt="Ícone de Minério">
+                        <p>Volume total de minério de bauxita economizado</p>
+                        <div class="value" id="bauxita">171.000,00 Kg</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="assets/images/icon-mining.png" alt="Ícone de Mineração">
+                        <p>Volume total de minério de ferro economizado</p>
+                        <div class="value" id="ferro">728.010,00 Kg</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="assets/images/icon-water.png" alt="Ícone de Água">
+                        <p>Volume total de água economizada</p>
+                        <div class="value" id="agua">5.973.930,00 Litros</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="assets/images/icon-oil.png" alt="Ícone de Petróleo">
+                        <p>Total de barris de petróleo economizados</p>
+                        <div class="value" id="petroleo">2.790,00 Barris</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="assets/images/icon-oil-vegetable.png" alt="Ícone de Óleo Vegetal">
+                        <p>Total de óleo vegetal NÃO descartado na natureza</p>
+                        <div class="value" id="oleoVegetal">90,00 toneladas</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="assets/images/icon-co2.png" alt="Ícone de Créditos de Carbono">
+                        <p>Total de créditos de carbono gerados</p>
+                        <div class="value" id="creditosCarbono">720,00 unid.</div>
+                    </div>
                 </div>
-            </div>
+            </div>        
         </section>
-        
-        <section id="depoimentos">
+
+        <section id="depoimentos" class="content-section">
             <div class="container">
                 <h2>Depoimentos de Clientes Satisfeitos</h2>
                 <div><p> </p></div>
@@ -150,8 +179,6 @@
                         <div class="testimonial-text">
                             <p> "Com o apoio da Axel Gestão, a RecMais alcançou um marco significativo 
                                 na captação de massas elegíveis ao crédito de reciclagem, superando 3.000 toneladas.
-                                A expertise da Axel em estruturar processos claros e eficientes foi essencial para 
-                                ampliarmos nosso impacto e fortalecer a confiança na cadeia de logística reversa.
                                 Essa parceria não só potencializou nossos resultados, mas também consolidou nossa contribuição
                                 para a economia circular. A Axel é, sem dúvida, um aliado estratégico para o nosso sucesso."</p>
                             <p class="author"></p>
@@ -186,6 +213,6 @@
                 <p>Email: contato@axelconsultoria.com | Telefone: +55 (21) xxx-xxxx</p>
             </div>
         </footer>
-
+    <script src="assets/js/app.js" defer></script>
     </body>
 </html>

@@ -5,87 +5,12 @@
     box-sizing: border-box;
 }
 
-
-
 /* styles.css */
 body {
     font-family: Arial, sans-serif;
-    margin-top: 120px; /* Ajuste o valor com base na altura do cabeçalho */
+    margin-top: 120px; /* Ajuste o valor com base na altura do cabeçalho */ 
     
 }
-
-
-
-
-.axel-logo {
-    width: 250px; /* Ajuste este valor conforme necessário */
-    height: auto;
-    margin-left: 10px; /* Espaço entre o logo e a borda esquerda */
-}
-
-
-.logo {
-    top: 30px; /* Ajuste para cima/baixo */
-    left: 20px; /* Ajuste para esquerda/direita */
-    height: 50px; /* Mantém as proporções */
-}
-
-/* Estilo básico para o cabeçalho */
-.header {
-    position: relative;
-     
-    background-color: #001C7F;
-}
-
-.counter-container {
-    display: flex;
-    align-items: center;
-    padding: 0px;
-    background-color: #001C7F;
-    
-    
-}                         
-.counter-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-
-.counter-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.weight-counter {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.progress-bar {
-    width: 200px;  /* Reduz a largura da barra de progresso */
-    height: 20px;  /* Reduz a altura da barra de progresso */
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.progress-bar-fill {
-    height: 100%;
-    width: 0;
-    background-color: #0cbe1b;
-    transition: width 0.3s ease;
-}
-.container {
-    width: 100%;                           
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: center; /* Ajusta verticalmente */
-    justify-content: flex-start; /* Ajusta horizontalmente */
-}
-
 
 /* Cabeçalho */
 header {
@@ -148,11 +73,33 @@ html {
 }
 
 
+/* Ajsutes na posicao do logo */
+.logo {
+    top: 30px; /* Ajuste para cima/baixo */
+    left: 20px; /* Ajuste para esquerda/direita */
+    height: 50px; /* Mantém as proporções */
+}
+
+/* Estilo básico para o cabeçalho */
+.header {
+    position: relative;
+    background-color: #001C7F;
+}
+
+
+.container {
+    width: 100%;                           
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center; /* Ajusta verticalmente */
+    justify-content: flex-start; /* Ajusta horizontalmente */
+}
+
 
 /* Estilo dos ícones de mídias sociais */
 .social-icons {
     position: absolute;
-    top: -10px;  /* Ajuste o valor conforme necessário */
+    top: -30px;  /* Ajuste o valor conforme necessário */
     right: 30px; /* Ajuste o valor conforme necessário */
 }
 
@@ -211,19 +158,6 @@ html {
     z-index: 1; /* Garante que o conteúdo fique acima do vídeo */
 }
 
-
-/* Estilos para a seção de vídeos */
-#nossos-impactos {
-    padding: 4rem 0;
-    background-color: #f8f9fa;
-}
-
-#nossos-impactos h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-}
-
 .video-container {
     display: flex;
     justify-content: center;
@@ -231,17 +165,6 @@ html {
     flex-wrap: wrap;
 }
 
-.video-item {
-    flex: 1;
-    max-width: 560px;
-    margin: 1rem;
-    text-align: center;
-}
-
-.video-item iframe {
-    width: 100%;
-    height: 315px;
-}
 
 /* Texto no Banner */
 .banner h1 {
@@ -294,6 +217,7 @@ html {
     text-align: center;
     margin-bottom: 1.5rem;
 }
+
 
 .service {
     background: #f4f4f4;
@@ -351,23 +275,35 @@ html {
     
 }
 
-
-                    
 #sobre {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #f9f9f9; /* Cor de fundo (opcional) */
 }
+
+#sobre .container {
+    max-width: 800px; /* Largura máxima para o texto */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+#sobre h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#sobre p {
+    color: #555;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+                   
 
 #sobre h1, #sobre h2 {
     color: #2c3e50;
     margin-bottom: 15px;
 }
 
-#sobre p {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
 
 #sobre ul {
     list-style-type: disc;
@@ -387,6 +323,18 @@ html {
     color: #27ae60;
 }
 
+#servicos .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center;  /* Centraliza o texto */
+    margin: 0 auto;
+}
+
+#servicos .service {
+    margin: 20px 0; /* Espaçamento entre os serviços */
+    max-width: 600px; /* Limita a largura para uma boa leitura */
+}
 .team-photo img {
     max-width: 100%;
     height: auto;
@@ -395,6 +343,123 @@ html {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+
+/* Estilos para Calculadora Ambiental */
+#nossos-impactos {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que a calculadora fique centralizada verticalmente */
+}
+
+#nossos-impactos h1, #nossos-impactos h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+#nossos-impactos h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* Calculadora Ambiental */
+.calculadora {
+            width: 80%;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+.calculadora h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.total-compensado {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+    background: linear-gradient(90deg, #27ae60, #2ecc71);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.total-compensado .valor {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    color: #f1c40f;
+}
+
+.barra-progresso {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.barra-progresso div {
+    height: 20px;
+    width: 0%; /* Inicialmente com 0% de progresso */
+    background-color: #27ae60;
+    transition: width 1s ease-in-out; /* Animação suave */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f3f9f5;
+}
+
+        .grid-item img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .grid-item p {
+            margin: 0;
+            color: #333;
+            font-size: 14px;
+        }
+
+.grid-item .value {
+    font-weight: bold;
+    font-size: 18px;
+    color: #27ae60;
+    margin-top: 5px;
+}
+.value {
+    transition: all 0.5s ease-in-out;
+    font-size: 1.2em;
+    color: #4caf50;
+}
+
+.value.changed {
+    font-size: 1.5em;
+    color: #ff5733;
+}
+
+/*Configuracao secao Servicos */
 #servicos {
     padding: 40px 20px;
     background-color: #f9f9f9;
@@ -643,6 +708,11 @@ html {
     background-color: #f9f9f9; /* Exemplo de cor de fundo */
 }
 
+#depoimnentos h1, #depoimentos h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -653,6 +723,8 @@ h2 {
     font-size: 2rem;
     margin-bottom: 30px;
 }
+
+/* Depoimentos*/
 
 .testimonial-container {
     display: flex;
@@ -702,6 +774,8 @@ h2 {
     font-size: 1rem; /* Tamanho de texto padrão */
     margin-top: 5px; /* Espaçamento superior menor */
 }
+
+
 
 .chatbot {
     position: fixed;
@@ -776,15 +850,13 @@ h2 {
     }
     body {
     font-family: Arial, sans-serif;
-    margin-top: 120px; /* Ajuste o valor com base na altura do cabeçalho */
+    margin-top: 100px; /* Ajuste o valor com base na altura do cabeçalho */
     
     }
     .counter-container {
     display: flex;
-    align-items: center;
-    padding:-10px;
-    background-color: #001C7F;
-    
+   
+   
         
     }
 
@@ -829,7 +901,7 @@ h2 {
     /* Posiciona o menu no lado direito */
     nav {
         position: absolute;
-        top:90px; /* Mantém o menu mais abaixo */
+        top:80px; /* Mantém o menu mais abaixo */
         right: 0; /* Alinha o menu à direita */
        
         color: #fff;
@@ -916,6 +988,7 @@ h2 {
     color: #0073e6;  /* Cor ao passar o mouse sobre os ícones */
     }
 
+    
     .testimonial {
         flex-direction: column;
         text-align: center;
