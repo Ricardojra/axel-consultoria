@@ -1,3 +1,8 @@
+document.querySelector('.menu-toggle').addEventListener('click', () => {
+    document.querySelector('nav ul').classList.toggle('active');
+});
+
+
 // Menu toggle
 function toggleMenu() {
   const hamburger = document.querySelector(".hamburger");
