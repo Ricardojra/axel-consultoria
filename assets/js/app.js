@@ -1,8 +1,3 @@
-document.querySelector('.menu-toggle').addEventListener('click', () => {
-    document.querySelector('nav ul').classList.toggle('active');
-});
-
-
 // Menu toggle
 function toggleMenu() {
   const hamburger = document.querySelector(".hamburger");
@@ -85,8 +80,6 @@ function atualizarValores() {
 document.addEventListener("DOMContentLoaded", function() {
     atualizarValores();
 });
-
-
 
 // Testimonials carousel
 let currentSlide = 0;
